@@ -27,8 +27,9 @@ html, body {
 
     position: relative;
     grid-area: site_header;
-    border-bottom: 3px solid #D7241C;
+    border-top: 3px solid #D7241C;
     box-shadow: 0px 1px 15px #aaa;
+    border-bottom: #a0a0a0;
     background-color: #fff;
     line-height: 60px;
 }
