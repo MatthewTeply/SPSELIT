@@ -45,4 +45,5 @@ $(document).ready(function() {
             is_search_toggled = false;
         }
     });
+
 });

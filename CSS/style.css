@@ -258,6 +258,7 @@ html, body {
   width: 300px;
   display: inline-block;
   text-align: left;
+  margin-top: 20px;
 }
 
 .landing_img_container_label h1 {
@@ -276,6 +277,29 @@ html, body {
   margin-top: 20px;
 }
 
+.landing_img_container_label button {
+
+  border-radius: 3px;
+  margin-top: 15px;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  padding: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid #fff;;
+  cursor: pointer;
+  outline: none;
+}
+
+.landing_img_container_label button:active {
+
+  border: 3px double #fff;
+  padding: 23px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
 .black_div {
 
   background-color: #000;
@@ -285,6 +309,33 @@ html, body {
   position: absolute;
   top: 0px;
   left: 20px;
+}
+
+@media screen and (max-width: 900px) {
+
+  .landing_img_container img {
+
+    max-width: 473px;
+    max-height: 272px;
+  }
+
+  .black_div {
+
+    height: 272px;
+  }
+
+  .site_main {
+
+    grid-area: site_main;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 272px 1fr;
+    grid-template-areas:
+    "landing"
+    "news"
+    ;
+  }
 }
 
 .welcome_div {
@@ -309,20 +360,40 @@ html, body {
 
 .news {
 
+  text-align: left;
   display: inline-block;;
   grid-area: news;
   border: 1px solid #E5E5E5;
-  margin: 40px;
-  padding-top: 10px;
-  box-shadow: 1px 1px 5px #CCC;
+  margin-left: -5px;
+  height: 543px;
+  background-color: #fff;
+  vertical-align: top;
 }
 
-.news b {
+@media screen and (max-width: 1394px) {
+
+  .news {
+
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.news h3:first-child {
 
   margin: 10px;
+  margin-top: 20px;
   display: block;
-  border-bottom: 1px solid #E5E5E5;
   padding-bottom: 5px;
+  background-color: #D7241C;
+  border-bottom: 3px solid #bc1d16;
+  color: #fff;
+  padding: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: 400;
+  display: inline-block;
 }
 
 .news main {
@@ -330,21 +401,25 @@ html, body {
   display: inline-block;
   width: 300px;
   margin: 20px;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-right: 0px;
   vertical-align: top;
+  text-align: center;
 }
 
 .news main p {
 
-  font-size: 18px;
   color: #555;
+  width: 279px;
+  text-align: center;
+  margin-top: 5px;
 }
 
 .news main img {
 
   width: 279px;
   height: 186px;
+  margin-top: 10px;
 }
 
 .news main h3 {
@@ -355,10 +430,16 @@ html, body {
 
 .news aside {
 
+  padding-top: 10px;
   display: inline-block;;
-  width: 200px;
   text-align: center;
-  border-bottom: 1px solid #E5E5E5;
+  margin-left: 20px;
+  border-left: 1px solid #e5e5e5;
+  height: calc(100% - 10px);
+  background-color: #fafafa;
+  color: #222;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .news aside img {
@@ -366,19 +447,89 @@ html, body {
   display: inline-block;;
   width: 140px;
   height: 94px;
+  margin-top: 10px;
+}
+
+.news aside p {
+
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 16px;
+  width: 140px;
+  border-bottom: 1px dashed #D7241C;
+  padding: 5px;
+  color: #222;
 }
 
 .news aside b {
 
-  display: block;
+  color: #D7241C;
 }
 
+@media screen and (max-width: 1390px) {
+
+  .news aside {
+    
+    display: block;
+  }
+
+  .landing {
+
+    padding-left: 15px;
+  }
+
+  .landing_img_container img {
+
+    margin-left: 3px;
+  }
+
+  .landing_img_container_label {
+
+    top: 15px;
+  }
+
+  .black_div {
+
+    left: 3px;
+  }
+
+  .news {
+
+    border: none;
+    margin-left: 3px;
+  }
+
+  .news main {
+
+    display: none;
+  }
+
+  .news aside {
+  
+    margin-left: 0px;
+    height: auto;
+    border-right: 1px solid #e5e5e5;
+  }
+  
+  .news aside img {
+
+    width: 280px;
+    height: 188px;
+  }
+
+  .news aside article {
+
+    display: inline-block;
+    vertical-align: top;
+  }
+}
 .posts {
 
   width: 300px;
   display: inline-block;
   vertical-align: top;
   margin-top: 40px;
+  height: 520px;
 }
 
 .posts article {
@@ -389,4 +540,5 @@ html, body {
   width: 300px;
   box-shadow: 1px 1px 5px #CCC;
   margin-bottom: 20px;
+  height: 142px;
 }
